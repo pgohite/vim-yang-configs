@@ -1,0 +1,143 @@
+# Yang snippets for rapid typing
+
+snippet aug
+	augment "${1}" {
+	  description
+	    "${2}";
+	}
+
+
+snippet org
+	organization "${1}";
+
+snippet imp
+	import ${1} {
+	  prefix ${2};
+	}
+
+snippet conf
+	config false;
+
+snippet contact
+	contact
+	  "${1}";
+
+snippet cont
+	container ${1} {
+	  description
+	    "${2}";
+	}
+
+snippet desc
+	description
+	  "${1}";
+
+snippet def
+	default ${1};
+
+snippet en
+	enumeration {
+	 enum ${1} {
+	   description
+	     "${3}TODO";
+	 }
+	 description
+	   "${2}";
+	}
+
+snippet enum
+	enum ${1} {
+	  description
+	    "${2}";
+	}
+
+snippet id
+	identity ${1} {
+	  description
+	    "${2}";
+	}
+
+	snippet idref
+	identityref {
+	  base ${1};
+	}
+
+snippet if
+	if-feature ${1};
+
+snippet feat
+	feature ${1} {
+	  description
+	    "This features represents the ability to ${2}";
+	}
+
+snippet gr
+	grouping ${1} {
+	  description
+	    "${2}";
+	}
+
+snippet le
+	leaf ${1}
+
+snippet leafref
+	leafref {
+	  path "${1}";
+	}
+
+snippet mod
+	module ${1} {
+	  ${2}
+	}
+
+snippet name
+	namespace "urn:${1}";
+
+snippet pres
+	presense
+	  "${1}";
+
+snippet ref
+	reference
+	  "${1}";
+
+snippet rev
+	revision `system("date +%Y-%m-%d")` {
+	  description
+	    "${1}";
+	  reference
+	    "${2}";
+	}
+
+snippet rpc
+	rpc ${1} {
+	  description
+	    "${2}";
+	}
+
+snippet refine
+	refine "${1}" {
+	  ${2}
+	}
+
+snippet td
+	typedef ${1} {
+	  type ${2};
+	  description
+	    "${3}";
+	}
+
+snippet uses
+	uses ${1} {
+	  description
+		  "{$2}";
+	}
+
+snippet max
+	max-length ${1};
+
+snippet min
+	min-length ${1};
+
+snippet man
+	mandatory true;

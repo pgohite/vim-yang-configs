@@ -1,0 +1,11 @@
+--langdef=yang
+--langmap=yang:.yang
+--regex-yang=/[ ^]module [ \t]*([a-zA-Z0-9_-]+)[ \t]*{/\1/m,Modules/
+--regex-yang=/[ ^]import [ \t]*([a-zA-Z0-9_-]+)[ \t]*{/\1/i,Imports/
+--regex-yang=/[ ^]include [ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/x,Includes/
+--regex-yang=/[ ^]feature [ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/f,Features/
+--regex-yang=/[ ^]identity [ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/y,Identities/
+--regex-yang=/[ ^]typedef [ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/t,Types/
+--regex-yang=/[ ^]grouping [ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/g,Groupings/
+--regex-yang=/[ ^]notification[ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/n,Notifications/
+--regex-yang=/[ ^]rpc[ \t]*([a-zA-Z0-9_-]+)[ \t]*[{;]/\1/r,RPCs/
